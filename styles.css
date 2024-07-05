@@ -70,17 +70,20 @@ li button {
     cursor: pointer;
 }
 
-footer {
+.newTask {
     display: flex;
     justify-content: space-between;
+    gap: 10px;
 }
 
-footer input {
+.newTask input {
     width: 70%;
     padding: 5px;
 }
 
-footer button {
+.newTask button {
+  
+   
     padding: 5px 10px;
     cursor: pointer;
 }
