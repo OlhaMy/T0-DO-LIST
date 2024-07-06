@@ -9,17 +9,33 @@
   <body>
     <div class="container">
       <header class="header">
-        <input type="text" id="listTitle" value="To Do List" />
-        <button id="duplicateButton" type="button" data-create>+</button>
+        <!-- <button id="duplicateButton" type="button" data-create>+</button> -->
       </header>
       <main>
-        <ul id="todoList"></ul>
+        <section class="todos">
+          <form class="todos-form js-form">
+            <input
+              class="todos-input"
+              type="text"
+              name="todos"
+              id="newTodoInput"
+              placeholder="Add new task..."
+            />
+            <input
+              class="todos-input"
+              type="text"
+              name="priority"
+              placeholder="add priority task..."
+            />
+            <button class="todos-btn" type="submit" data-add>&#43;</button>
+          </form>
+
+          <ul class="todos-list"></ul>
+        </section>
       </main>
       <div class="newTask">
-        <input type="text" id="newTodoInput" placeholder="Add new task..." />
-        <button id="addButton" type="button" data-add>Add</button>
-        <button id="editButton" type="button" data-edit>Edit</button>
-        <button id="doneButton" type="button" data-done>Done</button>
+        <!-- <button id="editButton" type="button" data-edit>Edit</button>
+        <button id="doneButton" type="button" data-done>Done</button> -->
       </div>
     </div>
 
