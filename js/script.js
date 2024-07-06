@@ -9,7 +9,6 @@ refs.form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const todosName = e.currentTarget.elements.todos.value.trim();
-
   const todosPriority = e.currentTarget.elements.priority.value.trim();
 
   const todo = {

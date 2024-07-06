@@ -1,89 +1,90 @@
-* {
-    box-sizing: border-box;
+body, html {
     margin: 0;
     padding: 0;
-}
-
-body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: #f0f0f0;
-}
-
-.container {
+  }
+  
+  .container {
     background-color: #fff;
+    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
     padding: 20px;
     max-width: 400px;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.header input {
-    border: none;
-    font-size: 1.5rem;
-    width: 70%;
-}
-
-.header button {
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-main {
-    flex-grow: 1;
-    overflow-y: auto;
-    margin-bottom: 10px;
-}
-
-ul {
-    list-style: none;
-}
-
-li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-li input[type="text"] {
-    border: none;
-    flex-grow: 1;
-}
-
-li button {
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-.newTask {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-}
-
-.newTask input {
-    width: 70%;
-    padding: 5px;
-}
-
-.newTask button {
+  }
   
-   
-    padding: 5px 10px;
+  .header {
+    text-align: center;
+  }
+  
+  .todos {
+    margin-top: 20px;
+  }
+  
+  .todos-form {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .todos-input {
+    width: calc(50% - 10px);
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .todos-btn {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
     cursor: pointer;
-}
+  }
+  
+  .todos-btn:hover {
+    background-color: #218838;
+  }
+  
+  .todos-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  .todos-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .todos-item:last-child {
+    border-bottom: none;
+  }
+  
+  .todos-text {
+    flex: 1;
+  }
+  
+  .todos-info {
+    margin-left: 10px;
+    font-size: 0.9em;
+    color: #777;
+  }
+  
+  .todos-item button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+ 

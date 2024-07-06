@@ -8,25 +8,32 @@
   </head>
   <body>
     <div class="container">
-      <header class="header">
-        <!-- <button id="duplicateButton" type="button" data-create>+</button> -->
-      </header>
+      <header class="header"></header>
       <main>
         <section class="todos">
+          <h1 class="todo-title">To do list</h1>
           <form class="todos-form js-form">
             <input
               class="todos-input"
               type="text"
               name="todos"
               id="newTodoInput"
+              min="0"
+              max="100"
               placeholder="Add new task..."
             />
             <input
               class="todos-input"
-              type="text"
+              type="v"
               name="priority"
-              placeholder="add priority task..."
+              list="options"
             />
+            <datalist id="options">
+              <option value="high"></option>
+              <option value="medium"></option>
+              <option value="low"></option>
+            </datalist>
+
             <button class="todos-btn" type="submit" data-add>&#43;</button>
           </form>
 
