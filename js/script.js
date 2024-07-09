@@ -3,6 +3,9 @@ const refs = {
   todoList: document.querySelector(".todos-list"),
 };
 
+const currentDate = new Date();
+console.log(currentDate);
+
 const todos = [];
 
 refs.form.addEventListener("submit", (e) => {
@@ -10,6 +13,11 @@ refs.form.addEventListener("submit", (e) => {
 
   const todosName = e.currentTarget.elements.todos.value.trim();
   const todosPriority = e.currentTarget.elements.priority.value.trim();
+
+  if (!todosName || !todosPriority) {
+    alert("Please enter both a task and a priority");
+    return;
+  }
 
   const todo = {
     text: todosName,
@@ -20,14 +28,15 @@ refs.form.addEventListener("submit", (e) => {
   refs.todoList.insertAdjacentHTML("beforeend", cteateTodo(todo));
 });
 
-function cteateTodo(obj) {
+function cteateTodo({ text, priority }) {
   return `
   <li class="todos-item">
-              <span class="todos-text"> ${obj.text}</span>
-              <span class="todos-info">priority: ${obj.priority}</span>
-              <button type="button">delete</button>
-              <button type="button">edit</button>
-              <button type="button">complete</button>
+              <span class="todos-text"> ${text}</span>
+              <span class="todos-info">priority: ${priority}</span>
+             
+              <button type="button">&#9998;</button>
+              <button type="button">&#10003;</button>
+              <button type="button">&#10007;</button>
             </li>
     `;
 }
