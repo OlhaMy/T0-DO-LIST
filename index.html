@@ -22,18 +22,24 @@
               max="100"
               placeholder="Add new task..."
             />
-            <input
+            <!-- <input
               class="todos-input"
               type="text"
               name="priority"
               list="options"
-            />
-            <datalist id="options">
+            /> -->
+            <!-- <select id="options">
               <option value="high"></option>
               <option value="medium"></option>
               <option value="low"></option>
-            </datalist>
+            </select> -->
+            <select name="select" class="todos-select">
+              <option value="high">higt</option>
 
+              <option value="medium">medium</option>
+
+              <option value="low">low</option>
+            </select>
             <button class="todos-btn" type="submit" data-add>&#43;</button>
           </form>
 
