@@ -11,7 +11,11 @@
       <header class="header"></header>
       <main>
         <section class="todos">
-          <h1 class="todo-title">To do list</h1>
+          <h1 class="todo-title">
+            To do list
+            <span class="time"></span>
+          </h1>
+
           <form class="todos-form js-form">
             <input
               class="todos-input"
@@ -22,34 +26,20 @@
               max="100"
               placeholder="Add new task..."
             />
-            <!-- <input
-              class="todos-input"
-              type="text"
-              name="priority"
-              list="options"
-            /> -->
-            <!-- <select id="options">
-              <option value="high"></option>
-              <option value="medium"></option>
-              <option value="low"></option>
-            </select> -->
+
             <select name="select" class="todos-select">
               <option value="high">higt</option>
-
               <option value="medium">medium</option>
-
               <option value="low">low</option>
             </select>
+
             <button class="todos-btn" type="submit" data-add>&#43;</button>
           </form>
 
           <ul class="todos-list"></ul>
         </section>
       </main>
-      <div class="newTask">
-        <!-- <button id="editButton" type="button" data-edit>Edit</button>
-        <button id="doneButton" type="button" data-done>Done</button> -->
-      </div>
+      <div class="newTask"></div>
     </div>
 
     <footer></footer>
